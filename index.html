@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    
+    <!-- Primary Meta Tags -->
+    <title>Mathew Munene - Full Stack Developer & Tech Innovator</title>
+    <meta name="description" content="Professional Full Stack Developer specializing in modern web technologies, data analytics, and innovative digital solutions. Based in Nairobi, Kenya.">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, React, Python, JavaScript, Data Analytics, UI/UX Designer, Nairobi, Kenya">
+    <meta name="author" content="Mathew Munene">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mathewmunene.dev">
+    <meta property="og:title" content="Mathew Munene - Full Stack Developer & Tech Innovator">
+    <meta property="og:description" content="Professional Full Stack Developer specializing in modern web technologies, data analytics, and innovative digital solutions.">
+    <meta property="og:image" content="https://mathewmunene.dev/profile.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mathewmunene.dev">
+    <meta property="twitter:title" content="Mathew Munene - Full Stack Developer">
+    <meta property="twitter:description" content="Professional Full Stack Developer specializing in modern web technologies">
+    <meta property="twitter:image" content="https://mathewmunene.dev/profile.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mathew Munene",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://mathewmunene.dev",
+        "email": "munenemathew07@gmail.com",
+        "telephone": "+254745207444",
+        "sameAs": [
+            "https://www.linkedin.com/in/mathew-munene-224971273",
+            "https://github.com/Nexh819"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nairobi",
+            "addressCountry": "Kenya"
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical CSS for loading screen -->
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader-container {
+            text-align: center;
+            color: white;
+        }
+        
+        .code-loader {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .code-line {
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        .code-line:nth-child(1) { width: 80px; animation-delay: 0s; }
+        .code-line:nth-child(2) { width: 120px; animation-delay: 0.2s; }
+        .code-line:nth-child(3) { width: 100px; animation-delay: 0.4s; }
+        .code-line:nth-child(4) { width: 90px; animation-delay: 0.6s; }
+        .code-line:nth-child(5) { width: 110px; animation-delay: 0.8s; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        @keyframes chatPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="profile.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader-container">
+            <div class="code-loader">
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+            </div>
+            <div class="loading-text">
+                <span class="loading-word">Initializing</span>
+                <span class="loading-dots">
+                    <span>.</span>
+                    <span>.</span>
+                    <span>.</span>
+                </span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="brand-link" aria-label="Mathew Munene - Home">
+                    <span class="brand-text">M</span>
+                    <span class="brand-dot">.</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-close" id="nav-close" aria-label="Close navigation menu">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </div>
+                <ul class="nav-list" role="menubar">
+                    <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                    <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                    <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                    <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+                    <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="banner">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting" data-aos="fade-up">
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="greeting-wave">👋</div>
+                    </div>
+                    
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        <span class="title-name">Mathew Munene</span>
+                        <span class="title-profession">
+                            <span id="typed-text"></span>
+                        </span>
+                    </h1>
+                    
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Passionate Full Stack Developer with 3+ years of experience creating innovative digital solutions. 
+                        I specialize in modern web technologies, data analytics, and user-centric design to transform ideas into impactful applications.
+                    </p>
+                    
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label">Years Exp</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="25">0</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <span>Let's Talk</span>
+                            <i class="fas fa-comment"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social" data-aos="fade-up" data-aos-delay="500">
+                        <a href="https://github.com/Nexh819" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mathew-munene-224971273" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:munenemathew07@gmail.com" class="social-link" aria-label="Email contact">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="tel:+254745207444" class="social-link" aria-label="Phone contact">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+                    <div class="image-container">
+                        <img src="profile.jpg" 
+                             alt="Mathew Munene - Professional headshot of Full Stack Developer from Nairobi, Kenya" 
+                             class="profile-image"
+                             loading="eager"
+                             width="400"
+                             height="400">
+                        <div class="image-overlay">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <span>50+ Projects</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                <span>Happy Clients</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-trophy" aria-hidden="true"></i>
+                                <span>Award Winner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="700">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span class="scroll-text">Scroll Down</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Discover my journey, passion, and the driving force behind my work
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-intro">
+                        <h3>Building Digital Experiences That Matter</h3>
+                        <p>
+                            I'm a passionate Full Stack Developer based in Nairobi, Kenya, with a deep love for creating 
+                            innovative digital solutions that make a real impact. My journey in tech started with curiosity 
+                            and has evolved into a mission to bridge the gap between complex technology and user-friendly experiences.
+                        </p>
+                    </div>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Education & Continuous Learning</h4>
+                                <p>Computer Science background with ongoing certifications in emerging technologies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Innovation & Problem Solving</h4>
+                                <p>Passionate about finding creative solutions to complex challenges</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>User-Centric Approach</h4>
+                                <p>Every project starts with understanding user needs and creating meaningful experiences</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="github-activity" data-aos="fade-up" data-aos-delay="400">
+    <h3>Recent GitHub Activity</h3>
+    <div class="activity-feed">
+        <div class="activity-item">
+            <div class="activity-icon commit">
+                <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="activity-content">
+                <p>Pushed <strong>5 commits</strong> to <a href="#">portfolio-v2</a></p>
+                <time>2 hours ago</time>
+            </div>
+        </div>
+        
+        <div class="activity-item">
+            <div class="activity-icon star">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="activity-content">
+                <p>Starred <a href="#">react-three-fiber</a></p>
+                <time>1 day ago</time>
+            </div>
+        </div>
+        
+        <div class="activity-item">
+            <div class="activity-icon repo">
+                <i class="fas fa-folder"></i>
+            </div>
+            <div class="activity-content">
+                <p>Created repository <a href="#">ai-task-manager</a></p>
+                <time>3 days ago</time>
+            </div>
+        </div>
+        
+        <div class="activity-item">
+            <div class="activity-icon pr">
+                <i class="fas fa-code-pull-request"></i>
+            </div>
+            <div class="activity-content">
+                <p>Opened pull request in <a href="#">open-source-project</a></p>
+                <time>1 week ago</time>
+            </div>
+        </div>
+    </div>
+    
+    <div class="github-stats">
+        <div class="stat-item">
+            <span class="stat-number">1,247</span>
+            <span class="stat-label">Contributions</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">23</span>
+            <span class="stat-label">Repositories</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">156</span>
+            <span class="stat-label">Stars Earned</span>
+        </div>
+    </div>
+    
+    <a href="https://github.com/Nexh819" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="View GitHub profile">
+        <i class="fab fa-github"></i>
+        View Full GitHub Profile
+    </a>
+</div>
+                    <div class="about-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Hire Me</span>
+                            <i class="fas fa-handshake"></i>
+                        </a>
+                        <a href="assets/Mathew_Munene_CV.pdf" download="Mathew_Munene_CV.pdf" class="btn btn-outline">
+    <span>Download CV</span>
+    <i class="fas fa-download"></i>
+</a>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="visual-container">
+                        <div class="achievement-cards">
+                            <div class="achievement-card">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="achievement-content">
+                                    <h4>Clean Code</h4>
+                                    <p>Writing maintainable, scalable code following best practices</p>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-card">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="achievement-content">
+                                    <h4>Responsive Design</h4>
+                                    <p>Creating seamless experiences across all devices</p>
+                                </div>
+                            </div>
+                            
+                            <div class="achievement-card">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="achievement-content">
+                                    <h4>Performance</h4>
+                                    <p>Optimizing applications for speed and efficiency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">
+                    A timeline of my professional growth and key achievements
+                </p>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3>Senior Full Stack Developer</h3>
+                        <h4>Freelance & Contract Work</h4>
+                        <p>
+                            Leading end-to-end development of web applications, managing client relationships, 
+                            and delivering innovative solutions across various industries including e-commerce, 
+                            healthcare, and fintech.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Developed 15+ production-ready applications</li>
+                            <li>Achieved 98% client satisfaction rate</li>
+                            <li>Reduced development time by 40% through reusable components</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3>Full Stack Developer</h3>
+                        <h4>Tech Startup</h4>
+                        <p>
+                            Contributed to the development of a revolutionary EdTech platform serving 10,000+ students. 
+                            Worked in an agile environment, collaborating with cross-functional teams to deliver 
+                            high-quality features on tight deadlines.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Implemented real-time chat functionality</li>
+                            <li>Optimized database queries improving performance by 60%</li>
+                            <li>Mentored 3 junior developers</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 2022</div>
+                        <h3>Junior Developer & Intern</h3>
+                        <h4>Digital Agency</h4>
+                        <p>
+                            Started my professional journey as an intern, quickly advancing to junior developer role. 
+                            Gained hands-on experience in web development, digital marketing, and client communication.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Built responsive websites for 20+ clients</li>
+                            <li>Learned advanced JavaScript frameworks</li>
+                            <li>Contributed to SEO and digital marketing strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Do</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">
+                    A comprehensive overview of my technical expertise and capabilities
+                </p>
+            </div>
+            
+            <div class="skills-content">
+                <!-- Technical Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>React</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>JavaScript</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="98%"></div>
+                                </div>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>CSS3</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Node.js</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>MongoDB</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>PostgreSQL</h4>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Technologies -->
+                <div class="technology-stack" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Technologies & Tools</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A showcase of my best work and creative solutions
+                </p>
+            </div>
+            
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Featured Project 1 -->
+                <div class="project-card featured" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="action-btn" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="action-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="openProjectModal('project1')" aria-label="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Featured</div>
+                        <h3>Advanced E-Commerce Platform</h3>
+                        <p>A complete e-commerce solution with real-time inventory management, payment processing, and advanced analytics dashboard.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                            <span>TensorFlow</span>
+                            <span>Redux</span>
+                        </div>
+                    </div>
+                    <div class="project-stats">
+    <div class="stat">
+        <i class="fas fa-users"></i>
+        <span>500+ Downloads</span>
+    </div>
+    <div class="stat">
+        <i class="fas fa-star"></i>
+        <span>4.8 Rating</span>
+    </div>
+</div>
+                </div>
+                <!-- Project 2 -->
+<div class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="300">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mobile App">
+        <div class="project-overlay">
+            <div class="project-actions">
+                <a href="#" class="action-btn" aria-label="View Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="action-btn" aria-label="View Code">
+                    <i class="fab fa-github"></i>
+                </a>
+                <button class="action-btn" onclick="openProjectModal('project2')" aria-label="View Details">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="project-category">Mobile</div>
+        <h3>React Native Food Delivery App</h3>
+        <p>Cross-platform mobile app with real-time tracking, payment integration, and user-friendly interface.</p>
+        <div class="project-tech">
+            <span>React Native</span>
+            <span>Firebase</span>
+            <span>Stripe</span>
+            <span>Maps API</span>
+        </div>
+    </div>
+</div>
+
+<!-- Project 3 -->
+<div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="400">
+    <div class="project-image">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Analytics Dashboard">
+        <div class="project-overlay">
+            <div class="project-actions">
+                <a href="#" class="action-btn" aria-label="View Live Demo">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" class="action-btn" aria-label="View Code">
+                    <i class="fab fa-github"></i>
+                </a>
+                <button class="action-btn" onclick="openProjectModal('project3')" aria-label="View Details">
+                    <i class="fas fa-eye"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="project-category">Analytics</div>
+        <h3>Business Intelligence Dashboard</h3>
+        <p>Comprehensive analytics platform with real-time data visualization and automated reporting features.</p>
+        <div class="project-tech">
+            <span>Python</span>
+            <span>D3.js</span>
+            <span>PostgreSQL</span>
+            <span>FastAPI</span>
+        </div>
+    </div>
+</div>
+
+<!-- Project 4 -->
+                <div class="project-card" data-category="design" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2139&q=80" alt="UI/UX Design">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="action-btn" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="action-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="openProjectModal('project4')" aria-label="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Design</div>
+                        <h3>Brand Identity & Web Design</h3>
+                        <p>Complete brand identity and responsive web design for a fintech startup.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Adobe CC</span>
+                            <span>Webflow</span>
+                            <span>Principle</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Learning Platform">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="action-btn" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="action-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="openProjectModal('project5')" aria-label="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">EdTech</div>
+                        <h3>Online Learning Platform</h3>
+                        <p>Comprehensive e-learning platform with video streaming, interactive quizzes, and progress tracking.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>AWS S3</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" alt="AI Project">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="#" class="action-btn" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="action-btn" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="action-btn" onclick="openProjectModal('project6')" aria-label="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">AI/ML</div>
+                        <h3>AI-Powered Chatbot</h3>
+                        <p>Intelligent customer service chatbot with natural language processing and sentiment analysis.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>NLTK</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-cta" data-aos="fade-up" data-aos-delay="800">
+                <p>Want to see more of my work?</p>
+                <a href="https://github.com/Nexh819" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="View all projects on GitHub">
+                    <span>View All Projects</span>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Offer</span>
+                <h2 class="section-title">Services</h2>
+                <p class="section-description">
+                    Comprehensive digital solutions tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications built with modern technologies, responsive design, and optimal performance.</p>
+                    <ul class="service-features">
+                        <li>Responsive Web Design</li>
+                        <li>E-commerce Solutions</li>
+                        <li>Content Management Systems</li>
+                        <li>Progressive Web Apps</li>
+                    </ul>
+                    <div class="service-price">Starting at $500</div>
+                </div>
+                
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-end application development from concept to deployment with ongoing maintenance and support.</p>
+                    <ul class="service-features">
+                        <li>Frontend & Backend Development</li>
+                        <li>Database Design & Optimization</li>
+                        <li>API Development & Integration</li>
+                        <li>Cloud Deployment & DevOps</li>
+                    </ul>
+                    <div class="service-price">Starting at $1,200</div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform your data into actionable insights with custom analytics solutions and visualizations.</p>
+                    <ul class="service-features">
+                        <li>Data Visualization Dashboards</li>
+                        <li>Business Intelligence Solutions</li>
+                        <li>Machine Learning Models</li>
+                        <li>Automated Reporting Systems</li>
+                    </ul>
+                    <div class="service-price">Starting at $800</div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design solutions that create intuitive and engaging digital experiences.</p>
+                    <ul class="service-features">
+                        <li>User Research & Testing</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Brand Identity Design</li>
+                        <li>Design Systems</li>
+                    </ul>
+                    <div class="service-price">Starting at $400</div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO & Digital Marketing</h3>
+                    <p>Boost your online presence with comprehensive SEO strategies and digital marketing campaigns.</p>
+                    <ul class="service-features">
+                        <li>Technical SEO Audits</li>
+                        <li>Content Strategy</li>
+                        <li>Social Media Management</li>
+                        <li>Performance Analytics</li>
+                    </ul>
+                    <div class="service-price">Starting at $300</div>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Consulting & Training</h3>
+                    <p>Technical consulting and team training to help your organization adopt best practices and new technologies.</p>
+                    <ul class="service-features">
+                        <li>Technical Architecture Reviews</li>
+                        <li>Code Reviews & Optimization</li>
+                        <li>Team Training Programs</li>
+                        <li>Technology Strategy</li>
+                    </ul>
+                    <div class="service-price">Starting at $100/hr</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-description">
+                    Real testimonials from satisfied clients and collaborators
+                </p>
+            </div>
+            
+            <div class="testimonials-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Mathew delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and technical expertise helped us increase our online sales by 300%."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="John Smith">
+                        </div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <span>CEO, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Working with Mathew was a game-changer for our startup. He built our entire tech infrastructure from scratch and continues to provide excellent support. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Founder, InnovateLab</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Mathew's data analytics solution transformed how we understand our business. The dashboard he created provides insights we never knew we needed. Exceptional work!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <span>CTO, DataViz Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-prev" onclick="changeTestimonial(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+                <button class="testimonial-next" onclick="changeTestimonial(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+<!-- Recommendations Section -->
+<section id="recommendations" class="recommendations section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-subtitle">LinkedIn</span>
+            <h2 class="section-title">Professional Recommendations</h2>
+            <p class="section-description">
+                Real endorsements from colleagues and clients on LinkedIn
+            </p>
+        </div>
+        
+        <div class="recommendations-grid">
+            <div class="recommendation-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="linkedin-header">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Recommendation</span>
+                </div>
+                <p>"Mathew is an exceptional developer who consistently delivers high-quality solutions. His expertise in full-stack development and problem-solving skills make him invaluable to any team."</p>
+                <div class="recommender">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop&crop=face" alt="Tech Lead">
+                    <div class="recommender-info">
+                        <strong>David Rodriguez</strong>
+                        <span>Senior Tech Lead at Microsoft</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendation-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="linkedin-header">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Recommendation</span>
+                </div>
+                <p>"Working with Mathew was a game-changer for our startup. His ability to understand complex requirements and deliver elegant solutions is remarkable."</p>
+                <div class="recommender">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=50&h=50&fit=crop&crop=face" alt="Startup Founder">
+                    <div class="recommender-info">
+                        <strong>Lisa Chen</strong>
+                        <span>Founder & CEO at InnovateLab</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendation-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="linkedin-header">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Recommendation</span>
+                </div>
+                <p>"Mathew's data analytics solutions transformed how we understand our business. His technical expertise combined with business acumen is exceptional."</p>
+                <div class="recommender">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="CTO">
+                    <div class="recommender-info">
+                        <strong>Michael Thompson</strong>
+                        <span>CTO at DataViz Solutions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recommendations-cta" data-aos="fade-up" data-aos-delay="400">
+            <p>Want to see more recommendations?</p>
+            <a href="https://www.linkedin.com/in/mathew-munene-224971273" target="_blank" class="btn btn-outline">
+                <span>View LinkedIn Profile</span>
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</section>
+    <!-- Blog Section -->
+    <section id="blog" class="blog section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Latest Insights</span>
+                <h2 class="section-title">Blog & Articles</h2>
+                <p class="section-description">
+                    Sharing knowledge and insights about technology, development, and industry trends
+                </p>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="React Best Practices">
+                        <div class="blog-category">Featured</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                January 15, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                8 min read
+                            </span>
+                        </div>
+                        <h3>Advanced React Patterns for Scalable Applications</h3>
+                        <p>Explore advanced React patterns and techniques that will help you build more maintainable and scalable applications. Learn about compound components, render props, and custom hooks.</p>
+                        <div class="blog-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <a href="#" class="blog-link">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80" alt="Data Science">
+                        <div class="blog-category">Data Science</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                January 10, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                12 min read
+                            </span>
+                        </div>
+                        <h3>Machine Learning in Production: Lessons Learned</h3>
+                        <p>Real-world insights from deploying machine learning models to production. Common pitfalls, best practices, and monitoring strategies for ML systems.</p>
+                        <div class="blog-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                        <a href="#" class="blog-link">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80" alt="UI/UX Design">
+                        <div class="blog-category">Design</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                January 5, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                6 min read
+                            </span>
+                        </div>
+                        <h3>The Psychology of User Interface Design</h3>
+                        <p>Understanding how users interact with digital interfaces and applying psychological principles to create more intuitive and engaging user experiences.</p>
+                        <div class="blog-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Psychology</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <a href="#" class="blog-link">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="blog-cta" data-aos="fade-up" data-aos-delay="400">
+                <p>Want to read more articles?</p>
+                <a href="#" class="btn btn-outline">
+                    <span>Visit My Blog</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Ready to start your project? Let's discuss how I can help bring your ideas to life
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-intro">
+                        <h3>Let's Build Something Amazing Together</h3>
+                        <p>I'm always excited to work on new projects and help businesses achieve their digital goals. Whether you need a complete web application, mobile app, or just want to discuss your ideas, I'm here to help.</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:munenemathew07@gmail.com">munenemathew07@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+254745207444">+254 745 207 444</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Response Time</h4>
+                                <span>Within 24 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Nexh819" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+    <i class="fab fa-github" aria-hidden="true"></i>
+</a>
+                            <a href="https://www.linkedin.com/in/mathew-munene-224971273" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+</a>
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="200">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="ui-ux-design">UI/UX Design</option>
+                            <option value="data-analytics">Data Analytics</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="form-error" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Project Budget</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-1k">Under $1,000</option>
+                            <option value="1k-5k">$1,000 - $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k-plus">$10,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, goals, and any specific requirements..." required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Subscribe to my newsletter for tech insights and updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Sending...
+                        </span>
+                        <i class="btn-icon fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-text">M</span>
+                        <span class="brand-dot">.</span>
+                    </div>
+                    <p>Full Stack Developer passionate about creating innovative digital solutions that make a real impact.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/mathew-munene-224971273" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn profile">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+                        <a href="https://github.com/Nexh819" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub profile">
+    <i class="fab fa-github" aria-hidden="true"></i>
+</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter profile">
+    <i class="fab fa-twitter" aria-hidden="true"></i>
+</a>
+                        <a href="mailto:munenemathew07@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+               <div class="footer-links"> 
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#experience">Experience</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web Development</a></li>
+                            <li><a href="#services">Mobile Apps</a></li>
+                            <li><a href="#services">UI/UX Design</a></li>
+                            <li><a href="#services">Data Analytics</a></li>
+                            <li><a href="#services">Consulting</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:munenemathew07@gmail.com">munenemathew07@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+254745207444">+254 745 207 444</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nairobi, Kenya</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mathew Munene. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> in Kenya</p>
+                </div>
+                <div class="footer-actions">
+                    <a href="assets/Mathew_Munene_CV.pdf" download="Mathew_Munene_CV.pdf" class="footer-link">Download CV</a>                    <a href="#contact" class="footer-link">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <!-- Chat Widget -->
+        <div class="chat-widget" id="chatWidget">
+    <div class="chat-button" id="chatButtonMain" aria-label="Open chat">
+        <i class="fas fa-comments"></i>
+        <div class="chat-notification" id="chatNotificationMain">1</div>
+    </div>
+    <div class="chat-box" id="chatBox" style="display: none;">
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <img src="profile.jpg" alt="Mathew">
+            </div>
+            <div class="chat-info">
+                <h4>Mathew Munene</h4>
+                <span class="status online">Online</span>
+            </div>
+            <button class="chat-close" id="chatCloseBtn" aria-label="Close chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <img src="profile.jpg" alt="Mathew">
+                </div>
+                <div class="message-content">
+                    <p>Hi there! 👋 I'm Mathew. Thanks for visiting my portfolio!</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+            <div class="chat-message bot">
+                <div class="message-avatar">
+                    <img src="profile.jpg" alt="Mathew">
+                </div>
+                <div class="message-content">
+                    <p>How can I help you today? Feel free to ask about my services or projects! 🚀</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chat-suggestions">
+            <button class="suggestion-btn">Your Services</button>
+            <button class="suggestion-btn">Project Help</button>
+            <button class="suggestion-btn">Pricing Info</button>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chatInput" placeholder="Type your message..." maxlength="500">
+            <button class="chat-send" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+        
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <!-- Theme Toggle -->
+        <button class="theme-float" onclick="toggleTheme()" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Details</h3>
+                <button class="modal-close" onclick="closeProjectModal()" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Project details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h4>Message Sent Successfully!</h4>
+            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Optimized Script Loading -->
+    <script>
+        // Optimized Loading Manager
+        class LoadingManager {
+            constructor() {
+                this.loadedAssets = 0;
+                this.totalAssets = 6;
+                this.loadingScreen = document.getElementById('loading-screen');
+                this.progressFill = document.querySelector('.progress-fill');
+                this.progressText = document.querySelector('.progress-text');
+            }
+
+            updateProgress() {
+                this.loadedAssets++;
+                const percentage = Math.round((this.loadedAssets / this.totalAssets) * 100);
+                
+                if (this.progressFill) {
+                    this.progressFill.style.width = percentage + '%';
+                }
+                if (this.progressText) {
+                    this.progressText.textContent = percentage + '%';
+                }
+
+                if (this.loadedAssets >= this.totalAssets) {
+                    this.hideLoadingScreen();
+                }
+            }
+
+            hideLoadingScreen() {
+                setTimeout(() => {
+                    if (this.loadingScreen) {
+                        this.loadingScreen.style.opacity = '0';
+                        setTimeout(() => {
+                            this.loadingScreen.style.display = 'none';
+                            this.initializeApp();
+                        }, 500);
+                    }
+                }, 500);
+            }
+
+            initializeApp() {
+                // Initialize AOS
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1000,
+                        once: true,
+                        offset: 100,
+                        disable: window.innerWidth < 768
+                    });
+                }
+
+                // Initialize Typed.js
+                if (typeof Typed !== 'undefined') {
+                    new Typed('#typed-text', {
+                        strings: [
+                            'Full Stack Developer', 
+                            'Data Scientist', 
+                            'UI/UX Designer', 
+                            'Problem Solver', 
+                            'Tech Innovator'
+                        ],
+                        typeSpeed: 50,
+                        backSpeed: 30,
+                        backDelay: 2000,
+                        startDelay: 1000,
+                        loop: true,
+                        showCursor: true,
+                        cursorChar: '|'
+                    });
+                }
+
+                // Initialize Particles.js
+                if (typeof particlesJS !== 'undefined') {
+                    const isMobile = window.innerWidth < 768;
+                    particlesJS('particles-js', {
+                        particles: {
+                            number: { 
+                                value: isMobile ? 30 : 80, 
+                                density: { enable: true, value_area: 800 } 
+                            },
+                            color: { value: '#3b82f6' },
+                            shape: { type: 'circle' },
+                            opacity: { value: 0.5, random: false },
+                            size: { value: 3, random: true },
+                            line_linked: {
+                                enable: true,
+                                distance: 150,
+                                color: '#3b82f6',
+                                opacity: 0.4,
+                                width: 1
+                            },
+                            move: {
+                                enable: true,
+                                speed: isMobile ? 3 : 6,
+                                direction: 'none',
+                                random: false,
+                                straight: false,
+                                out_mode: 'out',
+                                bounce: false
+                            }
+                        },
+                        interactivity: {
+                            detect_on: 'canvas',
+                            events: {
+                                onhover: { enable: !isMobile, mode: 'repulse' },
+                                onclick: { enable: true, mode: 'push' },
+                                resize: true
+                            },
+                            modes: {
+                                repulse: { distance: 200, duration: 0.4 },
+                                push: { particles_nb: 4 }
+                            }
+                        },
+                        retina_detect: true
+                    });
+                }
+
+                console.log('🎉 Portfolio initialized successfully!');
+            }
+
+            loadScript(src, callback) {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = () => {
+                    this.updateProgress();
+                    if (callback) callback();
+                };
+                script.onerror = () => {
+                    console.warn(`Failed to load: ${src}`);
+                    this.updateProgress();
+                };
+                document.head.appendChild(script);
+            }
+
+            loadStylesheet(href) {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                link.onload = () => this.updateProgress();
+                link.onerror = () => {
+                    console.warn(`Failed to load: ${href}`);
+                    this.updateProgress();
+                };
+                document.head.appendChild(link);
+            }
+        }
+
+        // Initialize loading manager
+        const loadingManager = new LoadingManager();
+
+        // Load external resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load stylesheets
+            loadingManager.loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css');
+            loadingManager.loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+            // Load scripts
+            loadingManager.loadScript('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js');
+            loadingManager.loadScript('https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js');
+            loadingManager.loadScript('https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js');
+            loadingManager.loadScript('script.js');
+        });
+
+        // ServiceWorker removed - was causing conflicts
+console.log('📱 Portfolio scripts loaded successfully');
+    </script>
+    <script>
+// Auto-Popup Chat on Page Load
+console.log('🚀 Chat auto-popup script starting...');
+
+window.addEventListener('load', function() {
+    console.log('📄 Page loaded, setting up chat...');
+    
+    setTimeout(() => {
+        const chatButton = document.querySelector('.chat-button');
+        const chatNotification = document.querySelector('.chat-notification');
+        
+        if (chatButton) {
+            console.log('✅ Chat button found!');
+            
+            // Force show notification immediately
+            if (chatNotification) {
+                chatNotification.style.display = 'block';
+                chatNotification.style.animation = 'bounce 0.6s ease-in-out';
+                console.log('✅ Notification shown with bounce');
+            }
+            
+            // IMMEDIATE popup when page loads
+            setTimeout(() => {
+                chatButton.style.animation = 'chatPop 0.8s ease-out';
+                console.log('🎯 WELCOME POPUP triggered!');
+                
+                // Make it more noticeable
+                chatButton.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    chatButton.style.transform = 'scale(1)';
+                }, 800);
+                
+            }, 2000); // Pop after 2 seconds
+            
+            // Setup click functionality
+            let isOpen = false;
+            chatButton.onclick = function() {
+                console.log('💬 Chat clicked!');
+                isOpen = !isOpen;
+                
+                const chatBox = document.getElementById('chatBox');
+                if (chatBox) {
+                    if (isOpen) {
+                        chatBox.style.display = 'flex';
+                        if (chatNotification) chatNotification.style.display = 'none';
+                        console.log('📱 Chat opened');
+                    } else {
+                        chatBox.style.display = 'none';
+                        if (chatNotification) chatNotification.style.display = 'block';
+                        console.log('📴 Chat closed');
+                    }
+                }
+            };
+            
+            // Repeat welcome popup every 30 seconds for visitors
+            setInterval(() => {
+                if (!isOpen) {
+                    chatButton.style.animation = 'chatPop 0.8s ease-out';
+                    if (chatNotification) {
+                        chatNotification.style.display = 'block';
+                        chatNotification.style.animation = 'bounce 0.6s ease-in-out';
+                    }
+                    console.log('🔄 Periodic welcome popup');
+                }
+            }, 30000); // Every 30 seconds
+            
+        } else {
+            console.error('❌ Chat button NOT found!');
+        }
+    }, 500);
+});
+</script>
+
+<script>
+// Simple Chat Messaging
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.querySelector('.chat-send');
+        const chatMessages = document.getElementById('chatMessages');
+        
+        if (chatInput && chatSend && chatMessages) {
+            console.log('✅ Chat messaging elements found');
+            
+            // Send message function
+            function sendMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    console.log('📤 Sending message:', message);
+                    
+                    // Add user message
+                    const messageEl = document.createElement('div');
+                    messageEl.className = 'chat-message user';
+                    messageEl.innerHTML = `
+                        <div class="message-content">
+                            <p>${message}</p>
+                            <span class="message-time">Just now</span>
+                        </div>
+                    `;
+                    chatMessages.appendChild(messageEl);
+                    
+                    // Clear input
+                    chatInput.value = '';
+                    
+                    // Auto-reply after 1 second
+                    setTimeout(() => {
+                        const replyEl = document.createElement('div');
+                        replyEl.className = 'chat-message bot';
+                        replyEl.innerHTML = `
+                            <div class="message-avatar">
+                                <img src="profile.jpg" alt="Mathew">
+                            </div>
+                            <div class="message-content">
+                                <p>Thanks for your message! I'll get back to you soon. Feel free to email me at munenemathew07@gmail.com 📧</p>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        `;
+                        chatMessages.appendChild(replyEl);
+                        
+                        // Scroll to bottom
+                        chatMessages.scrollTop = chatMessages.scrollHeight;
+                    }, 1000);
+                    
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            }
+            
+            // Add event listeners
+            chatSend.onclick = sendMessage;
+            chatInput.onkeypress = function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            };
+            
+            console.log('✅ Chat messaging setup complete');
+        }
+    }, 1000);
+});
+</script>
+
+</body>
+</html>
+    <script>
+// Counter Animation Fix
+document.addEventListener('DOMContentLoaded', function() {
+    const counterElements = document.querySelectorAll('[data-count]');
+    
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    counterElements.forEach(el => {
+        counterObserver.observe(el);
+    });
+    
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-count'));
+        if (isNaN(target)) return;
+        
+        element.textContent = '0';
+        
+        const duration = 2000;
+        const startTime = performance.now();
+        
+        function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(easeOutQuart * target);
+            
+            element.textContent = current;
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                element.textContent = target;
+            }
+        }
+        
+        requestAnimationFrame(animate);
+    }
+});
+</script>
+<script>
+// Welcome Message Popup Only
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        console.log('🎉 Triggering welcome popup...');
+        
+        const chatButton = document.querySelector('.chat-button');
+        const chatNotification = document.querySelector('.chat-notification');
+        const chatBox = document.getElementById('chatBox');
+        
+        if (chatButton && chatBox) {
+            // Show notification with bounce
+            if (chatNotification) {
+                chatNotification.style.display = 'block';
+                chatNotification.style.animation = 'bounce 0.6s ease-in-out';
+            }
+            
+            // Pop animation
+            chatButton.style.animation = 'chatPop 0.8s ease-out';
+            
+            // Auto-open chat after pop animation
+            setTimeout(() => {
+                chatBox.style.display = 'flex';
+                if (chatNotification) chatNotification.style.display = 'none';
+                console.log('📱 Welcome chat opened automatically');
+                
+                // Auto-close after 5 seconds
+                setTimeout(() => {
+                    chatBox.style.display = 'none';
+                    console.log('📴 Welcome chat auto-closed');
+                }, 5000);
+                
+            }, 800); // Wait for pop animation to finish
+        }
+    }, 3000); // Show welcome after 3 seconds
+});
+</script>
+</body>
+</html>
