@@ -45,7 +45,7 @@ h2+.row{border-top:0;padding-top:0}
   .bar{flex-wrap:wrap;gap:6px 14px;padding:10px 0}
   nav{order:3;width:100%;overflow-x:auto;gap:20px;padding-bottom:4px}
   .hero{grid-template-columns:1fr;gap:48px;padding:40px 0 64px}
-  .photo{max-width:340px;margin-right:16px}
+  .photo{max-width:none;width:calc(100% - 16px);margin-right:16px}
   .row{grid-template-columns:1fr}
   section.wrap:not(.hero){padding:56px 0}
 }
